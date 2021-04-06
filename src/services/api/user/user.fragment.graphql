@@ -1,0 +1,21 @@
+fragment User on User {
+    id
+    firstName
+    lastName
+    title
+    phoneIndex
+    phoneNumber
+    isTermsAccepted
+    isActive
+    unreadFollowersCounter
+    countFollows
+    countFollowers
+    pushToken
+    voipToken
+    urlLinkedin
+    lookingFors {
+        id
+        value
+        key
+    }
+}

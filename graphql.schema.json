@@ -3944,6 +3944,22 @@
         "description": null,
         "fields": [
           {
+            "name": "action",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "subscriptionSource",
             "description": null,
             "args": [],
@@ -4049,6 +4065,22 @@
         "name": "ChatSubSendMessageEvent",
         "description": null,
         "fields": [
+          {
+            "name": "action",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
           {
             "name": "subscriptionSource",
             "description": null,
@@ -6646,13 +6678,19 @@
         "interfaces": null,
         "enumValues": [
           {
-            "name": "android",
+            "name": "ANDROID",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "ios",
+            "name": "IOS",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "BROWSER",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -7755,6 +7793,11 @@
           {
             "kind": "OBJECT",
             "name": "LiveRoomMaximumParticipantsReachedError",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "LiveRoomNotActiveError",
             "ofType": null
           },
           {
@@ -9572,6 +9615,22 @@
         "description": null,
         "fields": [
           {
+            "name": "action",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "subscriptionSource",
             "description": null,
             "args": [],
@@ -9624,7 +9683,7 @@
         "interfaces": null,
         "enumValues": [
           {
-            "name": "DEFAULT",
+            "name": "CALL",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -9643,6 +9702,22 @@
         "name": "LiveResponseRecordSubEvent",
         "description": null,
         "fields": [
+          {
+            "name": "action",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
           {
             "name": "subscriptionSource",
             "description": null,
@@ -9709,39 +9784,23 @@
             "deprecationReason": null
           },
           {
+            "name": "name",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "socketConnectionId",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "callRoomId",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "recordRoomId",
             "description": null,
             "args": [],
             "type": {
@@ -9928,18 +9987,6 @@
             "defaultValue": null,
             "isDeprecated": false,
             "deprecationReason": null
-          },
-          {
-            "name": "previousLiveRoomName",
-            "description": null,
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
           }
         ],
         "interfaces": null,
@@ -9974,44 +10021,12 @@
             "kind": "OBJECT",
             "name": "InputError",
             "ofType": null
-          },
-          {
-            "kind": "OBJECT",
-            "name": "LiveRoomNotFoundError",
-            "ofType": null
           }
         ]
       },
       {
-        "kind": "OBJECT",
-        "name": "LiveRoomInviteResult",
-        "description": null,
-        "fields": [
-          {
-            "name": "isSended",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "Boolean",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
         "kind": "UNION",
-        "name": "LiveRoomKickPayload",
+        "name": "LiveRoomInvitePayload",
         "description": null,
         "fields": null,
         "inputFields": null,
@@ -10020,7 +10035,7 @@
         "possibleTypes": [
           {
             "kind": "OBJECT",
-            "name": "LiveRoomKickResult",
+            "name": "NotificationResult",
             "ofType": null
           },
           {
@@ -10045,12 +10060,17 @@
           },
           {
             "kind": "OBJECT",
-            "name": "LiveRoomNotFoundError",
+            "name": "UserNotAvailableError",
             "ofType": null
           },
           {
             "kind": "OBJECT",
-            "name": "LiveRoomUserNotFoundError",
+            "name": "UserNotLoggedError",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "LiveRoomNotFoundError",
             "ofType": null
           }
         ]
@@ -10180,7 +10200,7 @@
       },
       {
         "kind": "OBJECT",
-        "name": "LiveRoomNotFoundError",
+        "name": "LiveRoomNotActiveError",
         "description": null,
         "fields": [
           {
@@ -10229,11 +10249,96 @@
       },
       {
         "kind": "OBJECT",
-        "name": "LiveRoomResult",
+        "name": "LiveRoomNotFoundError",
         "description": null,
         "fields": [
           {
-            "name": "isLiveRoomActive",
+            "name": "code",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "message",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "ErrorInterface",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "UNION",
+        "name": "LiveRoomRecordPermissionAskPayload",
+        "description": null,
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "LiveRoomRecordPermissionAskResult",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "GenericError",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "NotAuthorizedError",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "InputError",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "LiveRoomNotFoundError",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "LiveRoomRecordPermissionAskResult",
+        "description": null,
+        "fields": [
+          {
+            "name": "permissionAsked",
             "description": null,
             "args": [],
             "type": {
@@ -10247,9 +10352,83 @@
             },
             "isDeprecated": false,
             "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "LiveRoomRecordPermissionResponseInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "permissionResponse",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "UNION",
+        "name": "LiveRoomRecordPermissionResponsePayload",
+        "description": null,
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "LiveRoomRecordPermissionResponseResult",
+            "ofType": null
           },
           {
-            "name": "liveRoomName",
+            "kind": "OBJECT",
+            "name": "GenericError",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "NotAuthorizedError",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "InputError",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "LiveRoomNotFoundError",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "LiveRoomRecordPermissionResponseResult",
+        "description": null,
+        "fields": [
+          {
+            "name": "permissionResponse",
             "description": null,
             "args": [],
             "type": {
@@ -10257,7 +10436,34 @@
               "name": null,
               "ofType": {
                 "kind": "SCALAR",
-                "name": "String",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "LiveRoomResult",
+        "description": null,
+        "fields": [
+          {
+            "name": "liveRoom",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "LiveRoom",
                 "ofType": null
               }
             },
@@ -10294,6 +10500,12 @@
         "inputFields": null,
         "interfaces": null,
         "enumValues": [
+          {
+            "name": "INIT",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
           {
             "name": "CALL",
             "description": null,
@@ -10354,6 +10566,11 @@
             "kind": "OBJECT",
             "name": "LiveRoomNotFoundError",
             "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "LiveRoomNotActiveError",
+            "ofType": null
           }
         ]
       },
@@ -10363,15 +10580,15 @@
         "description": null,
         "fields": [
           {
-            "name": "isLiveRoomActive",
+            "name": "liveRoom",
             "description": null,
             "args": [],
             "type": {
               "kind": "NON_NULL",
               "name": null,
               "ofType": {
-                "kind": "SCALAR",
-                "name": "Boolean",
+                "kind": "OBJECT",
+                "name": "LiveRoom",
                 "ofType": null
               }
             },
@@ -10512,35 +10729,23 @@
             "deprecationReason": null
           },
           {
+            "name": "name",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringFilter",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "socketConnectionId",
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "StringFilter",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "callRoomId",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringFilter",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "recordRoomId",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringNullableFilter",
               "ofType": null
             },
             "defaultValue": null,
@@ -10625,6 +10830,71 @@
         "possibleTypes": null
       },
       {
+        "kind": "OBJECT",
+        "name": "LiveStopSubEvent",
+        "description": null,
+        "fields": [
+          {
+            "name": "action",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "subscriptionSource",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "isLiveRoomActive",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "SubscriptionInterface",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
         "kind": "UNION",
         "name": "LiveSubPayload",
         "description": null,
@@ -10633,6 +10903,11 @@
         "interfaces": null,
         "enumValues": null,
         "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "LiveStopSubEvent",
+            "ofType": null
+          },
           {
             "kind": "OBJECT",
             "name": "LiveAskRecordSubEvent",
@@ -10674,13 +10949,13 @@
         "interfaces": null,
         "enumValues": [
           {
-            "name": "en",
+            "name": "EN",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "fr",
+            "name": "FR",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -10697,13 +10972,13 @@
         "interfaces": null,
         "enumValues": [
           {
-            "name": "en",
+            "name": "EN",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "fr",
+            "name": "FR",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -11633,51 +11908,6 @@
             "deprecationReason": null
           },
           {
-            "name": "notificationVoipSend",
-            "description": "**Authentication**: `USER`",
-            "args": [
-              {
-                "name": "userId",
-                "description": null,
-                "type": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  }
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "data",
-                "description": null,
-                "type": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "INPUT_OBJECT",
-                    "name": "NotificationVoipSendInput",
-                    "ofType": null
-                  }
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              }
-            ],
-            "type": {
-              "kind": "UNION",
-              "name": "NotificationVoipSendPayload",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "reportCommunity",
             "description": "**Authentication**: `USER`",
             "args": [
@@ -12343,7 +12573,7 @@
             "deprecationReason": null
           },
           {
-            "name": "liveRoomKick",
+            "name": "liveRoomInvite",
             "description": "**Authentication**: `USER`",
             "args": [
               {
@@ -12381,7 +12611,81 @@
             ],
             "type": {
               "kind": "UNION",
-              "name": "LiveRoomKickPayload",
+              "name": "LiveRoomInvitePayload",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "LiveRoomRecordPermissionAsk",
+            "description": "**Authentication**: `USER`",
+            "args": [
+              {
+                "name": "liveRoomName",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "UNION",
+              "name": "LiveRoomRecordPermissionAskPayload",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "liveRoomRecordPermissionResponse",
+            "description": "**Authentication**: `USER`",
+            "args": [
+              {
+                "name": "liveRoomName",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "data",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "LiveRoomRecordPermissionResponseInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "UNION",
+              "name": "LiveRoomRecordPermissionResponsePayload",
               "ofType": null
             },
             "isDeprecated": false,
@@ -14446,79 +14750,6 @@
         "interfaces": [],
         "enumValues": null,
         "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
-        "name": "NotificationVoipSendInput",
-        "description": null,
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "liveRoomName",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "UNION",
-        "name": "NotificationVoipSendPayload",
-        "description": null,
-        "fields": null,
-        "inputFields": null,
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": [
-          {
-            "kind": "OBJECT",
-            "name": "NotificationResult",
-            "ofType": null
-          },
-          {
-            "kind": "OBJECT",
-            "name": "GenericError",
-            "ofType": null
-          },
-          {
-            "kind": "OBJECT",
-            "name": "NotAuthorizedError",
-            "ofType": null
-          },
-          {
-            "kind": "OBJECT",
-            "name": "InputError",
-            "ofType": null
-          },
-          {
-            "kind": "OBJECT",
-            "name": "UserNotFoundError",
-            "ofType": null
-          },
-          {
-            "kind": "OBJECT",
-            "name": "UserNotAvailableError",
-            "ofType": null
-          },
-          {
-            "kind": "OBJECT",
-            "name": "UserNotLoggedError",
-            "ofType": null
-          }
-        ]
       },
       {
         "kind": "SCALAR",
@@ -18598,6 +18829,22 @@
         "description": null,
         "fields": [
           {
+            "name": "action",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "subscriptionSource",
             "description": null,
             "args": [],
@@ -18636,6 +18883,11 @@
           {
             "kind": "OBJECT",
             "name": "LiveResponseRecordSubEvent",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "LiveStopSubEvent",
             "ofType": null
           },
           {
@@ -22518,6 +22770,22 @@
         "name": "UserUploadSubEvent",
         "description": null,
         "fields": [
+          {
+            "name": "action",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
           {
             "name": "subscriptionSource",
             "description": null,

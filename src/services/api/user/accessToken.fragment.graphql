@@ -1,0 +1,5 @@
+fragment AccessToken on AccessTokenResult {
+    accessToken
+    expiresIn
+    refreshToken
+}

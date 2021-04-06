@@ -1,0 +1,11 @@
+mutation createTeam($userId: Int!, $data: CommunityCreateInput!) {
+  communityCreate(userId: $userId, data: $data) {
+    __typename
+    ... on CommunityResult {
+      community {
+        id
+        name
+      }
+    }
+  }
+}
