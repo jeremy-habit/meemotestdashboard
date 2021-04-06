@@ -1,0 +1,20 @@
+overwrite: true
+watch: true
+schema: "https://dev.feelback.co/graphql"
+documents: "src/**/*.graphql"
+generates:
+  src/generated/index.ts:
+    schema: schema.graphql
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-document-nodes"
+      - "typescript-react-query"
+    config:
+      fetcher: "@/services/api/request#fetchData"
+      exposeQueryKeys: true
+      skipTypename: true
+      preResolveTypes: true
+  ./graphql.schema.json:
+    plugins:
+      - "introspection"
